@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE demo [
-  <!ELEMENT demo ANY >
-  <!ENTITY % extentity SYSTEM "http://localhost:50666/evil.dtd">
-  %extentity;
-]>
-<demo></demo>

